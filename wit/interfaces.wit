@@ -1,0 +1,6 @@
+package strawlab:iana-time-zone
+
+world interfaces {
+    import wasi:clocks/wall-clock
+    import wasi:clocks/timezone
+}

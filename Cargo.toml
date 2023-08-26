@@ -27,11 +27,14 @@ core-foundation-sys = "0.8.3"
 [target.'cfg(target_os = "windows")'.dependencies]
 windows = { version = "0.48.0", features = [ "Globalization" ] }
 
-[target.'cfg(target_arch = "wasm32")'.dependencies]
+[target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dependencies]
 js-sys = "0.3.50"
 wasm-bindgen = "0.2.70"
 
-[target.'cfg(target_arch = "wasm32")'.dev-dependencies]
+[target.'cfg(target_os = "wasi")'.dependencies]
+wit-bindgen = { version = "0.7" }
+
+[target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dev-dependencies]
 wasm-bindgen-test = "0.3"
 
 [target.'cfg(target_os = "haiku")'.dependencies]

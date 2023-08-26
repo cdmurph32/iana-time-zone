@@ -40,6 +40,7 @@ mod ffi_utils;
     all(target_arch = "wasm32", not(target_os = "wasi")),
     path = "tz_wasm32.rs"
 )]
+#[cfg_attr(target_os = "wasi", path = "tz_wasi.rs")]
 #[cfg_attr(
     any(target_os = "freebsd", target_os = "dragonfly"),
     path = "tz_freebsd.rs"
