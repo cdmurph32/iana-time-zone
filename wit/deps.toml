@@ -1,2 +1,2 @@
 #Use `wit-deps update` to pull in latest changes from "dynamic" branch
-clocks= "https://github.com/cdmurph32/wasi-clocks/archive/timezone-constructor.tar.gz"
+clocks= "https://github.com/cdmurph32/wasi-clocks/archive/timezone_redux.tar.gz"

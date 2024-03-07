@@ -3,11 +3,10 @@ pub(crate) mod bindings {
 }
 
 use bindings::wasi::clocks;
-use bindings::wasi::clocks::timezone::TimezoneDisplay;
 
 pub(crate) fn get_timezone_inner() -> Result<String, crate::GetTimezoneError> {
     let datetime = clocks::wall_clock::now();
-    let timezone_display: TimezoneDisplay = clocks::timezone::display(datetime);
+    let timezone_display = clocks::timezone::display(datetime);
 
     Ok(format!("{:?}", timezone_display.name))
 }

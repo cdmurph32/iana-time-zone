@@ -32,7 +32,7 @@ js-sys = "0.3.50"
 wasm-bindgen = "0.2.70"
 
 [target.'cfg(target_os = "wasi")'.dependencies]
-wit-bindgen = { version = "0.7" }
+wit-bindgen = { version = "0.21" }
 
 [target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dev-dependencies]
 wasm-bindgen-test = "0.3"
